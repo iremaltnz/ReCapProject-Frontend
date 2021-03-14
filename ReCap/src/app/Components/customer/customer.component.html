@@ -1,0 +1,22 @@
+
+<table class="table table-danger table-striped">
+    <thead>
+        <tr>
+         
+            <th>CustomerId</th>
+            <th>Customer Name&Surname</th>
+            
+            <th>Company Name</th>
+            
+        </tr>
+    </thead>
+    
+    <tr *ngFor="let customer of customers">
+       
+       <td>{{customer.customerId}}</td>
+        <td>{{customer.customerFirstName+" "+customer.customerLastName}}</td>
+        
+        <td>{{customer.companyName}}</td>
+       
+    </tr>
+</table>
