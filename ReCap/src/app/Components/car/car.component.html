@@ -12,7 +12,7 @@
             
         </tr>
     </thead>
-    <tr *ngFor="let car of cars">
+    <tr *ngFor="let car of cars" routerLink="carId/{{ car.carId }}">
         <td>{{car.carId}}</td>
         <td>{{car.carName}}</td>
         <td>{{car.brandName}}</td>
@@ -22,3 +22,4 @@
         <td>{{car.description}}</td>
     </tr>
 </table>
+

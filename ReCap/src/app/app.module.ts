@@ -10,6 +10,8 @@ import { CarComponent } from './Components/car/car.component';
 import { RentalComponent } from './Components/rental/rental.component';
 import { CustomerComponent } from './Components/customer/customer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CarImageComponent } from './Components/car-image/car-image.component';
+import { SideBarComponent } from './Components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ColorComponent,
     CarComponent,
     RentalComponent,
-    CustomerComponent
+    CustomerComponent,
+    CarImageComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
