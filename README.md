@@ -8,7 +8,7 @@ Car listesinde bir arabaya tıklandığında o arabaya ait detay sayfası oluşt
 
 
 Brand listesinde herhangi bir marka seçildiğinde, o markaya ait arabaları listelendi.
-![brands](https://user-images.githubusercontent.com/55363753/111851538-9ebdd100-8924-11eb-9fd1-9a313e6f7384.png)
+![Ekran Görüntüsü (67)](https://user-images.githubusercontent.com/55363753/111851681-3fac8c00-8925-11eb-8a11-2af77ea05b40.png)
 
 
 Color listesinde herhangi bir renk seçildiğinde, o renge ait arabaları listelendi
