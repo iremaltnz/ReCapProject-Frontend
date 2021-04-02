@@ -18,6 +18,9 @@ Kiralama sistemi yazıldı , araba o tarihlerde kiralı ise kiralama işlemi yap
 ![tarihonayıyok](https://user-images.githubusercontent.com/55363753/113459417-1fe58f80-941e-11eb-8cf2-b22252e59f04.png)
 
 Kredi kartıyla ödeme seçeneği getirildi sahte bir banka servisi yazıldı.Yanlış kart bilgisi girildiğinde işlem iptal edildi.
+
+
+
 ![ödeme onay](https://user-images.githubusercontent.com/55363753/113459412-1d833580-941e-11eb-83ad-2c2651c56260.png)
 ![kiralamabilgisi](https://user-images.githubusercontent.com/55363753/113459408-1c520880-941e-11eb-9761-cc7c03143ab0.png)
 ![ödeme onayı yok](https://user-images.githubusercontent.com/55363753/113459413-1e1bcc00-941e-11eb-93d5-e1c74e7469e2.png)
