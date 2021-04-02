@@ -1,0 +1,26 @@
+<br>
+<div class="row" >
+   
+    <div class="col-md-4">
+        <select [(ngModel)]="brandId" class="form-select " aria-label="Default select example" style="width: 200px;">
+            <option [ngValue]="undefined" disabled  selected> Tüm Markalar</option>
+            <option *ngFor="let brand of brands "  [value]="brand.brandId" >{{brand.brandName}}</option>
+          </select>
+    </div>
+  
+    <div class="col-md-4">
+        <select [(ngModel)]="colorId"class="form-select " aria-label="Default select example" style="width: 200px;">
+            <option [ngValue]="undefined" disabled  selected> Tüm Renkler</option>
+            <option *ngFor="let color of colors"  [value]="color.colorId"  >{{color.colorName}}</option>
+          </select>
+    </div>
+
+    <div class="col-md-2">
+        <button routerLink="/cars/carfilter/{{colorId}}/{{brandId}}"type="button" class="btn btn-success">Filtrele</button>
+    </div>
+
+    <div class="col-md-2">
+        <button routerLink="/cars"type="button" class="btn btn-danger">Temizle</button>
+    </div>
+</div>
+

@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-header">
+      <h5>Kart Bilgileri</h5>
+     </div>
+
+      <div class="card-header">
+         <form [formGroup]="paymentForm">
+              <label for="firstName"> İsim</label>
+              <input type="text"id="carId" formControlName="firstName"
+              class="form-control" placeholder="İsim">
+          </form>
+
+          <form [formGroup]="paymentForm">
+            <label for="lastName"> Soyisim </label>
+            <input type="text"id="lastName" formControlName="lastName"
+            class="form-control" placeholder="Soyisim">
+        </form>
+           
+        <form [formGroup]="paymentForm">
+            <label for="cardNumber">Kart Numarası</label>
+            <input type="number" id="cardNumber"  formControlName="cardNumber" 
+            class="form-control" placeholder="kart numarası ">
+        </form>
+
+        <form [formGroup]="paymentForm">
+            <label> Son Kullanım Tarihi (AA/YY)</label>
+            <div class="row">
+               <div class="col-md-2">
+                <input type="number" id="monthOfExpiration"  formControlName="monthOfExpiration" max="12"
+                class="form-control" >
+               </div>
+
+               <div class="col-md-2">
+
+                <input type="number" id="yearOfExpiration"   formControlName="yearOfExpiration" max="30"
+                class="form-control">
+               </div>
+            </div>
+           
+        </form>
+
+            
+        <form [formGroup]="paymentForm">
+            <label for="cVV">CVV</label>
+            <input type="number" id="cVV"  formControlName="cVV" 
+            class="form-control" placeholder="CVV  ">
+        </form>
+
+      </div>
+    
+
+
+    <div class="card-footer">
+     
+        <button type="button" (click)="paymentCheck()"   class="btn btn-info"> Öde</button>
+    </div>
+</div>
+

@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+      <h5>Araç Kirala</h5>
+     </div>
+
+     <div class="card-body">
+     <select  [(ngModel)]="currentCustomerId"   class="form-select " aria-label="Default select example" style="width: 200px;">
+        <option [ngValue]="undefined" disabled  selected> Müsteriler</option>
+        <option *ngFor="let customer of customers"  [ngValue]="customer.customerId"    >{{customer.customerFirstName}} {{customer.customerLastName}}</option>
+      </select>
+           
+        <form  [(ngModel)]="rentDate" [formGroup]="rentCarForm">
+            <label for="rentDate">Rent Date</label>
+            <input type="date" id="rentDate"  formControlName="rentDate"  max="2022-12-31" [(ngModel)]="rentDate"
+            class="form-control" placeholder="rent date">
+        </form>
+
+        <form  [(ngModel)]="returnDate" [formGroup]="rentCarForm">
+            <label for="returnDate">Return Dare</label>
+            <input type="date" id="returnDate" name="returnDate"  formControlName="returnDate" max="2022-12-31" [(ngModel)]="returnDate"
+            class="form-control" placeholder="return date">
+        </form>
+
+      </div>
+    
+
+
+    <div class="card-footer">
+     
+        <button type="button" class="btn btn-info" (click)="check()"> Kirala</button>
+    </div>
+</div>
+
+<div *ngIf="paymentCheck"> 
+      <app-payment [rental]="rental" ></app-payment>
+</div>

@@ -1,15 +1,30 @@
 
 
 
+  <label for="exampleFormControlInput1" class="form-label" style="color:white; font-size: 25px;">Marka ara</label>
+  <input type="text" [(ngModel)]="filterText"class="form-control" id="filterText" 
+  placeholder="Aradığınız markayı yazın">
 
- 
+
+<div *ngIf="filterText" class="alert alert-success">
+    {{filterText}} aradınız
+</div>
+
+ <br>
            
             <ul class="list-group">
-              <li class="list-group-item list-group-item-primary ">Brands </li>
                 <li (click)="setCurrentBrand(brand)" 
                 routerLink="/cars/brand/{{brand.brandId}}"
-                *ngFor="let brand of brands"
+                *ngFor="let brand of brands | filterBrandPipe:filterText"
                  [class]=getCurrentBrandClass(brand)>{{brand.brandName}}</li>
                 
               </ul>
   
+
+
+ 
+
+
+
+
+        

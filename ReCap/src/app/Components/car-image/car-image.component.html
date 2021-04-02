@@ -1,7 +1,7 @@
 
   
 
-    <div *ngFor="let carImage of carImages"  class="card" style="width: 30rem;">
+    <div  *ngFor="let carImage of carImages"  class="card" style="width: 30rem;">
         <img src="{{ path + carImage.imagePath }}" class="card-img-top" alt="...">
         <div class="card-body">
             <ul class="list-group list-group-flush" >
@@ -12,6 +12,7 @@
                 <li class="list-group-item">Model Year : {{car.modelYear}}</li>
                 <li class="list-group-item">  Daily Price : {{car.dailyPrice}}</li>
                 <li class="list-group-item">  Description : {{car.description}}</li>
+                <button routerLink="/rent-car/{{car.carId}}"type="button" class="btn btn-info"> Kirala</button>
               </ul>
 
         </div>

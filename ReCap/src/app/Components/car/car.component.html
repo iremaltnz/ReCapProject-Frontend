@@ -1,4 +1,19 @@
 
+<app-filter-car></app-filter-car>
+
+
+
+   
+   <br>
+   <label for="exampleFormControlInput1" class="form-label">Araba ara</label>
+    <input type="text" [(ngModel)]="filterText"class="form-control" id="filterText" 
+    placeholder="arama ifadesi giriniz">
+ 
+
+  <div *ngIf="filterText" class="alert alert-success">
+      {{filterText}} aradınız
+  </div>
+
 <table class="table table-secondary table-striped">
     <thead>
         <tr>
@@ -12,7 +27,7 @@
             
         </tr>
     </thead>
-    <tr *ngFor="let car of cars" routerLink="carId/{{ car.carId }}">
+    <tr *ngFor="let car of cars| filterCarPipe:filterText" routerLink="carId/{{ car.carId }}">
         <td>{{car.carId}}</td>
         <td>{{car.carName}}</td>
         <td>{{car.brandName}}</td>

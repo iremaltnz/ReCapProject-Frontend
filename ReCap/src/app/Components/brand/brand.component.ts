@@ -9,6 +9,7 @@ import { BrandService } from 'src/app/services/brand.service';
 })
 export class BrandComponent implements OnInit {
 
+  filterText="";
   brands:Brand[]=[];
   currentBrand:Brand;
   constructor(private brandService:BrandService) { }
