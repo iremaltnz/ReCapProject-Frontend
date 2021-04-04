@@ -1,0 +1,24 @@
+
+
+ <button  type="button" class="btn-btn-fill btn-success" style="margin-bottom: 20px;" routerLink="/brand-add" >Marka Ekle</button>
+
+<table class="table table-secondary table-striped">
+    <thead>
+        <tr>
+         
+            <th>Marka Id</th>
+            <th>Marka İsmi</th>
+            <th>İşlemler</th>
+           
+            
+        </tr>
+    </thead>
+    
+    <tr *ngFor="let brand of brands">
+       
+       <td >{{brand.brandId}}</td>
+        <td>{{brand.brandName}}</td>
+       <button class="btn-btn-fill btn-warning" style="margin-bottom: 5px;" routerLink="/brand-update/{{brand.brandId}}" >Güncelle</button>
+    </tr>
+</table>
+

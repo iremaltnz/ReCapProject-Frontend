@@ -1,0 +1,48 @@
+
+<div class="row">
+    <div class="col-md-6">
+<div class="card">
+
+    <div class="card-header">
+        <h5>Renk Güncelle</h5>
+    </div>
+
+    <div class="card-body">
+        
+      
+
+        <form [formGroup]="colorUpdateForm">
+            <div class="mb-3">
+                <label for="brandName">Renk Adı</label>
+            <div class="form-group">
+                <input type="text"
+                 id="colorName" formControlName="colorName"
+                 class="form-control" placeholder="Renk Adı"/>
+            </div>
+            </div>
+          </form>
+
+    </div>
+
+    <div class="card-footer">
+      <button type="button " class="btn-btn-fill btn-success" (click)="update()"> 
+             Renk Güncelle
+      </button>
+    </div>
+</div>
+    </div>
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">  
+             <h5>Güncellemek İstediğiniz Rengin Güncel Bilgileri</h5>
+     </div>
+     <div class="card-body">
+        <ul class="list-group list-group-flush" >
+            <li class="list-group-item">Renk Id : {{color.colorId}} </li>
+            <li class="list-group-item"> Renk İsmi : {{color.colorName}}</li>
+            
+          </ul>
+     </div>
+    </div>
+</div>
+</div>

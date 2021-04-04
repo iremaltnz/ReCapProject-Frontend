@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrandAddComponent } from './Components/brand/brand-add/brand-add.component';
+
+import { BrandListComponent } from './Components/brand/brand-list/brand-list.component';
+import { BrandUpdateComponent } from './Components/brand/brand-update/brand-update.component';
+import { BrandComponent } from './Components/brand/brand.component';
 import { CarImageComponent } from './Components/car-image/car-image.component';
+import { CarAddComponent } from './Components/car/car-add/car-add.component';
+import { CarUpdateComponent } from './Components/car/car-update/car-update.component';
 import { CarComponent } from './Components/car/car.component';
+import { ColorAddComponent } from './Components/color/color-add/color-add.component';
+import { ColorListComponent } from './Components/color/color-list/color-list.component';
+import { ColorUpdateComponent } from './Components/color/color-update/color-update.component';
 
 
 import { CustomerComponent } from './Components/customer/customer.component';
@@ -12,6 +22,14 @@ import { RentalComponent } from './Components/rental/rental.component';
 const routes: Routes = [
   {path:"",component:CarComponent},
   {path:"cars",component:CarComponent},
+  {path:"brands",component:BrandListComponent},
+  {path:"colors",component:ColorListComponent},
+
+  {path:"brand-update/:brandId",component:BrandUpdateComponent},
+  {path:"color-update/:colorId",component:ColorUpdateComponent},
+  {path:"car-update/:carId",component:CarUpdateComponent},
+
+
   {path:"rentals",component:RentalComponent},
   {path:"customers",component:CustomerComponent},
   {path:"cars/brand/:brandId",component:CarComponent},
@@ -23,6 +41,9 @@ const routes: Routes = [
  
   {path:"rent-car/:carId",component:RentCarComponent},
   {path:"payment",component:PaymentComponent},
+  {path:"brand-add",component:BrandAddComponent},
+  {path:"color-add",component:ColorAddComponent},
+  {path:"car-add",component:CarAddComponent}
  
 ];
 

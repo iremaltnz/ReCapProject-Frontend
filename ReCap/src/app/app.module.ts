@@ -21,7 +21,16 @@ import { FilterCarComponent } from './Components/car/filter-car/filter-car.compo
 import { RentCarComponent } from './Components/rent-car/rent-car.component';
 import{ToastrModule} from 'ngx-toastr';
 import { PaymentComponent } from './Components/payment/payment.component';
-import { PaymentSuccessComponent } from './Components/payment/payment-success/payment-success.component'; 
+import { PaymentSuccessComponent } from './Components/payment/payment-success/payment-success.component';
+import { BrandAddComponent } from './Components/brand/brand-add/brand-add.component';
+import { CarAddComponent } from './Components/car/car-add/car-add.component';
+import { ColorAddComponent } from './Components/color/color-add/color-add.component';
+import { BrandUpdateComponent } from './Components/brand/brand-update/brand-update.component';
+
+import { BrandListComponent } from './Components/brand/brand-list/brand-list.component';
+import { ColorListComponent } from './Components/color/color-list/color-list.component';
+import { ColorUpdateComponent } from './Components/color/color-update/color-update.component';
+import { CarUpdateComponent } from './Components/car/car-update/car-update.component'; 
 
 
 @NgModule({
@@ -42,6 +51,18 @@ import { PaymentSuccessComponent } from './Components/payment/payment-success/pa
     RentCarComponent,
     PaymentComponent,
     PaymentSuccessComponent,
+    BrandAddComponent,
+    CarAddComponent,
+    ColorAddComponent,
+    BrandUpdateComponent,
+    
+    BrandListComponent,
+    
+    ColorListComponent,
+    
+    ColorUpdateComponent,
+    
+    CarUpdateComponent,
     
   ],
   imports: [

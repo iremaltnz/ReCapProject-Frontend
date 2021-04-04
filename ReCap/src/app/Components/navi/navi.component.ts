@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-navi',
   templateUrl: './navi.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NaviComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getBrands(){
+   
+  }
 }
