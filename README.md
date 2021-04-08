@@ -1,5 +1,36 @@
 #  ReCapProject-Frontend
+Login/Register yetenekleri getirildi.
 
+![login](https://user-images.githubusercontent.com/55363753/114108220-52d6ca00-98db-11eb-8204-e12100f5634e.png)
+![register](https://user-images.githubusercontent.com/55363753/114108254-62561300-98db-11eb-92ee-86a98dcf90e4.png)
+
+ Kiralama esnasında müşterinin findeks puanını sorgulayacak sahte servis eklendi.
+ Bu puanı olmayan müşteriler araç kiralama işlemi gerçekleştiremez.
+ 
+ ![findex-car](https://user-images.githubusercontent.com/55363753/114108258-63874000-98db-11eb-982f-30f7f9fcc7ca.png)
+ ![findexyetersiz](https://user-images.githubusercontent.com/55363753/114108260-641fd680-98db-11eb-859f-5e2a377de893.png)
+ 
+ LocalStorage için servis yazıldı.
+ 
+ Giriş ve register için nav'a butonlar eklendi.
+ Eğer giriş yapılmamışsa nav'da bu butonlar oldu. Giriş yapılmışsa bu butonlar yerine müşteri adı  yazıldı.
+ 
+ ![butonlar](https://user-images.githubusercontent.com/55363753/114108500-de505b00-98db-11eb-898a-c3865650b954.png)
+ ![giriş-butonlar](https://user-images.githubusercontent.com/55363753/114108240-5b2f0500-98db-11eb-8ee8-1bb9a2a5c517.png)
+ 
+ Kullanıcı bilgilerini görüp güncelleyebilmekte.
+ 
+ ![profil](https://user-images.githubusercontent.com/55363753/114108261-65510380-98db-11eb-9426-8e722cb7a161.png)
+ ![kullanıcıbilgigüncelleme](https://user-images.githubusercontent.com/55363753/114108250-61bd7c80-98db-11eb-9303-0619017bb6aa.png)
+ ![bilgigüncellemeonay](https://user-images.githubusercontent.com/55363753/114108596-0d66cc80-98dc-11eb-8bde-e82004ce241b.png)
+ 
+ Kredi kartıyla ödeme alındığında kullanıcıya kredi kartını kaydedelim mi? Sorusu yöneltildi.
+ Kaydetmek isteyen müşteriye sonraki ödemede kayıtlı kredi kartını gösterildi.
+ 
+ ![kartkayıt](https://user-images.githubusercontent.com/55363753/114108251-61bd7c80-98db-11eb-8a87-75ed8a819e8d.png)
+ ![kartkayıtonay](https://user-images.githubusercontent.com/55363753/114108255-62eea980-98db-11eb-9fef-780f5431a220.png)
+ 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Custom Error Middleware eklendi fluent validation için refactoring yapıldı.
 Toast desteği verildi.
