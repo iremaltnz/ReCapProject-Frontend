@@ -25,6 +25,7 @@
             <th>model Year </th>
             <th>Daily Price</th>
             <th>Description </th>
+            <th>Findex Score </th>
             <th>İşlemler</th>
             
         </tr>
@@ -37,6 +38,7 @@
         <td>{{car.modelYear}}</td>
         <td>{{car.dailyPrice}}</td>
         <td>{{car.description}}</td>
+        <td>{{car.findexScore}}</td>
         <button class="btn-btn-fill btn-warning " style="margin-right: 15px; margin-bottom: 5px;"  routerLink="/car-update/{{car.carId}}" >Güncelle</button>
         <button class="btn-btn-fill btn-info"  routerLink="/cars/carId/{{ car.carId }}" >Detay</button>
     </tr>

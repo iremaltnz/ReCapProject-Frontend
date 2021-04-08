@@ -1,0 +1,22 @@
+<div *ngFor="let creditCard of creditCards" class="card">
+
+    <div class="card-header">   
+  <h5>Kart Bilgileri</h5>
+    </div>
+
+    <div class="card-body">
+
+        <ul class="list-group list-group-flush">
+            <li  class="list-group-item">İsim Soyisim : {{creditCard.firstName}} {{creditCard.lastName}} </li>
+            <li  class="list-group-item">Kart Numarası :{{creditCard.cardNumber}} </li>
+            <li  class="list-group-item">Son Kullanım Tarihi(AA/YY) : {{creditCard.monthOfExpiration}} {{creditCard.yearOfExpiration}}</li>
+            <li  class="list-group-item">CVV : {{creditCard.cvv}}</li>  
+        </ul>
+    </div>
+
+    <div class="card-footer">
+        <button type="button"  class="btn btn-info"> Öde</button>
+    </div>
+</div>
+
+

@@ -22,12 +22,41 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#" routerLink="/rentals">Tüm Kiralamalar</a>
           </li>
-         
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        
+            <button *ngIf="userCheck()==false"  type="button"class="w-100 btn btn-lg btn-warning" routerLink="/register" style="margin-left: 60px; width: 10px; height: 50px;">
+              Kaydol
+             </button>
+         
+         
+            <button  *ngIf="userCheck()==false" class="w-100 btn btn-lg btn-success" routerLink="/login" style="margin-left: 40px; width: 10px; height: 50px;">
+              Giriş yap
+            </button>
+            <li class="nav-item">
+      
+              <div  *ngIf="userCheck()==true" class="btn-group">
+                <button type="button" style="width: 200px; height: 40px; margin-right: 50px;" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{user.firstName}} {{user.lastName}}
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/user">Kullanıcı Bilgileri</a></li>
+                  <li><a class="dropdown-item" routerLink="/card-list">Kayıtlı Kredi Kartları </a></li>
+                  
+                </ul>
+              </div>
+              </li>
+
+          
+            <li class="nav-item">
+            <button  *ngIf="userCheck()==true" class="w-100 btn btn-lg btn-danger" (click)="signOut()" style="margin-right: 10px; width: 10px; height: 50px;">
+             Çıkış Yap
+            </button>
+        
+          </li>
+          
+       
+       
+        
       </div>
     </div>
   </nav>

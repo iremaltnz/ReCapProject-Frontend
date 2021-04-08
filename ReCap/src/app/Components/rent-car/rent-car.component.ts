@@ -10,6 +10,7 @@ import { CarDetail } from 'src/app/models/carDetail';
 import { CustomerDetail } from 'src/app/models/customerDetail';
 import { Rental } from 'src/app/models/rental';
 import { CustomerService } from 'src/app/services/customer.service';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 import { PaymentService } from 'src/app/services/payment.service';
 import { RentalService } from 'src/app/services/rental.service';
@@ -26,7 +27,8 @@ export class RentCarComponent implements OnInit {
     private rentalService:RentalService,
     private router:Router,
     private customerService:CustomerService,
-    private activatedRoute:ActivatedRoute) { }
+    private activatedRoute:ActivatedRoute,
+    private localStorageService:LocalStorageService) { }
 
   rentCarForm:FormGroup;
 
@@ -38,10 +40,6 @@ export class RentCarComponent implements OnInit {
   rentDate:Date;
   returnDate:Date;
 
-  carId2:number;
-  customerId2:number;
-  rentDate2:Date;
-  returnDate2:Date;
   
   customers:CustomerDetail[];
   currentCustomerId:number;
@@ -85,6 +83,8 @@ export class RentCarComponent implements OnInit {
         this.rentalService.check(this.rental).subscribe(data=>{
          
             this.paymentCheck=true;
+            this.localStorageService.setItem("rent-data",this.rental)
+            this.router.navigate(["payment"]);
             this.toastrService.success(data.message,"Başarılı");
            
         },dataError=>{

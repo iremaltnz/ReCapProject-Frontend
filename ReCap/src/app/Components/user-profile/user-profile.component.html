@@ -1,0 +1,87 @@
+<div   class="card" style="width: 30rem;">
+  <div class="card-header">
+<h5>Kullanıcı Bilgileri</h5>
+  </div>
+    <div class="card-body">
+        <ul *ngIf="getUser()==true" class="list-group list-group-flush" >
+            <li class="list-group-item">  İsim : {{user.firstName}}</li>
+            <li class="list-group-item">  Soyisim: {{user.lastName}}</li>
+            <li class="list-group-item"> Email : {{user.email}}</li>
+            <li *ngIf="getPassword()==true"class="list-group-item">Şifre: {{password}}</li>
+          </ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+<button type="button" style="margin-top: 15px;" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Bilgilerimi Güncelle
+  </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Bilgilerimi Güncelle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               
+                <form [formGroup]="userUpdateForm">
+                    <div class="mb-3">
+                        <label for="brandName">İsim</label>
+                    <div class="form-group">
+                        <input type="text"
+                         id="firstName" formControlName="firstName"
+                         class="form-control" placeholder="İsim"/>
+                    </div>
+                    </div>
+                  </form>
+
+                  <form [formGroup]="userUpdateForm">
+                    <div class="mb-3">
+                        <label for="brandName">Soyisim</label>
+                    <div class="form-group">
+                        <input type="text"
+                         id="lastName" formControlName="lastName"
+                         class="form-control" placeholder="Soyisim "/>
+                    </div>
+                    </div>
+                  </form>
+
+                  <form [formGroup]="userUpdateForm">
+                    <div class="mb-3">
+                        <label for="brandName">Email</label>
+                    <div class="form-group">
+                        <input type="text"
+                         id="email" formControlName="email"
+                         class="form-control" placeholder="email "/>
+                    </div>
+                    </div>
+                  </form>
+
+                  <form [formGroup]="userUpdateForm">
+                    <div class="mb-3">
+                        <label for="brandName">Şifre</label>
+                    <div class="form-group">
+                        <input type="text"
+                         id="password" formControlName="password"
+                         class="form-control" placeholder="Şifre"/>
+                    </div>
+                    </div>
+                  </form>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button"
+              (click)="userUpdate()"   class="btn btn-warning">Güncelle</button>
+              </div>
+        </div>
+      </div>
+  </div>

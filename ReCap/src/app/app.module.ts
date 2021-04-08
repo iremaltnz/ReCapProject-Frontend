@@ -11,7 +11,7 @@ import { ColorComponent } from './Components/color/color.component';
 import { CarComponent } from './Components/car/car.component';
 import { RentalComponent } from './Components/rental/rental.component';
 import { CustomerComponent } from './Components/customer/customer.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CarImageComponent } from './Components/car-image/car-image.component';
 import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { FilterCarPipePipe } from './pipes/filter-car-pipe.pipe';
@@ -21,7 +21,7 @@ import { FilterCarComponent } from './Components/car/filter-car/filter-car.compo
 import { RentCarComponent } from './Components/rent-car/rent-car.component';
 import{ToastrModule} from 'ngx-toastr';
 import { PaymentComponent } from './Components/payment/payment.component';
-import { PaymentSuccessComponent } from './Components/payment/payment-success/payment-success.component';
+
 import { BrandAddComponent } from './Components/brand/brand-add/brand-add.component';
 import { CarAddComponent } from './Components/car/car-add/car-add.component';
 import { ColorAddComponent } from './Components/color/color-add/color-add.component';
@@ -30,7 +30,14 @@ import { BrandUpdateComponent } from './Components/brand/brand-update/brand-upda
 import { BrandListComponent } from './Components/brand/brand-list/brand-list.component';
 import { ColorListComponent } from './Components/color/color-list/color-list.component';
 import { ColorUpdateComponent } from './Components/color/color-update/color-update.component';
-import { CarUpdateComponent } from './Components/car/car-update/car-update.component'; 
+import { CarUpdateComponent } from './Components/car/car-update/car-update.component';
+import { LoginComponent } from './Components/login/login.component'; 
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { RegisterComponent } from './Components/register/register.component';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
+import { CardComponent } from './Components/card/card.component';
+
+
 
 
 @NgModule({
@@ -50,7 +57,6 @@ import { CarUpdateComponent } from './Components/car/car-update/car-update.compo
     FilterCarComponent,
     RentCarComponent,
     PaymentComponent,
-    PaymentSuccessComponent,
     BrandAddComponent,
     CarAddComponent,
     ColorAddComponent,
@@ -64,6 +70,15 @@ import { CarUpdateComponent } from './Components/car/car-update/car-update.compo
     
     CarUpdateComponent,
     
+    LoginComponent,
+    
+    RegisterComponent,
+    
+    UserProfileComponent,
+    
+    CardComponent,
+ 
+    
   ],
   imports: [
     BrowserModule,
@@ -76,7 +91,9 @@ import { CarUpdateComponent } from './Components/car/car-update/car-update.compo
       positionClass:"toast-bottom-right"}
     ),
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
