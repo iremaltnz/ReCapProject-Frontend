@@ -1,4 +1,16 @@
 #  ReCapProject-Frontend
+
+   Kullanıcı kayıt olurken şifrenin en az 8 karakter olması kuralı getirildi ve custom directive yapısı kullanılarak eğer 8 karakterden az giriş yapılmışsa background rengi değiştirilerek kullanıcı uyarıldı .
+  
+   Register için kullanılan formda password girişi için custom form control yapısı kullanıldı.
+   
+ 
+![şifrekarakterhata](https://user-images.githubusercontent.com/55363753/114248755-31401600-99a1-11eb-9f21-09c892e900c9.png)
+![şifrekarakteronay](https://user-images.githubusercontent.com/55363753/114248757-32714300-99a1-11eb-98f4-fa91320eb43b.png)
+
+
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Login/Register yetenekleri getirildi.
 
 ![login](https://user-images.githubusercontent.com/55363753/114108220-52d6ca00-98db-11eb-8204-e12100f5634e.png)
