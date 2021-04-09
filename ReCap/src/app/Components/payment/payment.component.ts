@@ -37,7 +37,7 @@ export class PaymentComponent implements OnInit {
     private cardService:CardService) { }
 
   ngOnInit(): void {
-    this.user=this.localStorageService.getItem("user");
+    this.user=this.localStorageService.getItem('user');
 
     this.createPaymentForm()
     this.getCard(this.user.id);

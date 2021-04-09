@@ -39,7 +39,7 @@ export class NaviComponent implements OnInit {
  }
 
  getUser(){
-  if( this.user=this.localStorage.getItem("user")){
+  if( this.user=this.localStorage.getItem('user')){
     return true
         }
        return false

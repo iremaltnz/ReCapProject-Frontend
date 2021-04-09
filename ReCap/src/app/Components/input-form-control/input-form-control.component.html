@@ -1,0 +1,12 @@
+<div class="form-floating">
+<input
+type="text"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            passwordCheck
+[value]="value" [disabled]="isDisabled"
+(input)="onChange($event)"
+>
+<label for="floatingPassword">Parola(*En az 8 karakterden oluşmalıdır)</label>
+</div>

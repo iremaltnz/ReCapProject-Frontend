@@ -36,6 +36,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { RegisterComponent } from './Components/register/register.component';
 import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 import { CardComponent } from './Components/card/card.component';
+import { PasswordCheckDirective } from './directives/password-check.directive';
+import { InputFormControlComponent } from './Components/input-form-control/input-form-control.component';
 
 
 
@@ -77,6 +79,10 @@ import { CardComponent } from './Components/card/card.component';
     UserProfileComponent,
     
     CardComponent,
+    
+    PasswordCheckDirective,
+    
+    InputFormControlComponent,
  
     
   ],

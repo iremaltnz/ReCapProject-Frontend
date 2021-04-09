@@ -38,18 +38,12 @@
           />
           <label for="floatingInput">E-posta</label>
         </div>
+
         <div class="form-floating">
-          <input
-          formControlName="password"
-            type="password"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Parola</label>
+          <app-input-form-control formControlName="password"  > </app-input-form-control>
         </div>
-  
-       
+ 
+      
         <button class="w-100 btn btn-lg btn-primary" (click)="register()">
           Kayıt Ol
         </button>

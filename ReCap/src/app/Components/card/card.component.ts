@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
   creditCards:CreditCard[];
 
   ngOnInit(): void {
-    this.user=this.localStorageService.getItem("user");
+    this.user=this.localStorageService.getItem('user');
     console.log(this.user);
     this.cardList(this.user.id);
   }

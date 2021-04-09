@@ -29,15 +29,23 @@ export class RegisterComponent implements OnInit {
     }
 
     register(){
+      console.log(this.registerForm.value)
       if(this.registerForm.valid){
         console.log(this.registerForm.value);
         let loginModel=Object.assign({},this.registerForm.value)
         
         this.authService.register(loginModel).subscribe(data=>{
           this.toastrService.info(data.message,"Başarılı")
-       //  localStorage.setItem("token",data.data.token)
+     
         },dataError=>{
-         this.toastrService.error(dataError.message)
+          if(dataError.error.Errors.length>0){
+            for (let i = 0; i < dataError.error.Errors.length; i++) {
+              
+              this.toastrService.error(dataError.error.Errors[i].ErrorMessage,"Doğrulama Hatası")
+            }
+           
+          }
+        
         })
       }
     }
