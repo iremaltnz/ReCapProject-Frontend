@@ -1,6 +1,6 @@
 #  ReCapProject-Frontend
 
-   Kullanıcı kayıt olurken şifrenin en az 8 karakter olması kuralı getirildi ve custom directive yapısı kullanılarak eğer 8 karakterden az giriş yapılmışsa background rengi değiştirilerek kullanıcı uyarıldı .
+   Kullanıcı kayıt olurken şifrenin en az 8 karakter olması kuralı getirildi ve custom directive yapısı kullanılarak eğer 8 karakterden az giriş yapılmışsa background rengi değiştirilerek kullanıcı uyarıldı.
   
    Register için kullanılan formda password girişi için custom form control yapısı kullanıldı.
    
